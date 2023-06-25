@@ -1,49 +1,57 @@
-public class NoteBook {
+import java.util.*;
+public class NoteBook{
     private String name;
-    private Integer access_memory;
-    private Integer hard_drive;
-    private Integer os;
-    private String color;
+    private Integer ram; 
+    private Integer hd; 
+    private String os; 
+    private String color; 
 
-    public NoteBook(String name, Integer access_memory, Integer hard_drive, Integer os, String color) {
+    public void setName(String name) {
         this.name = name;
-        this.access_memory = access_memory;
-        this.hard_drive = hard_drive;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setRam(Integer ram) {
+        this.ram = ram;
+    }
+    public Integer getRam() {
+        return ram;
+    }
+    public void setHd(Integer hd) {
+        this.hd = hd;
+    }
+    public Integer getHd() {
+        return hd;
+    }
+    public void setOs(String os) {
+        this.os = os;
+    }
+    public String getOs() {
+        return os;
+    }
+    public void setColor(String color) {
+        this.color = color;
+    }
+    public String getColor() {
+        return color;
+    }
+    public NoteBook (String name, Integer ram, Integer hd, String os, String color){
+        this.name = name;
+        this.ram = ram;
+        this.hd = hd;
         this.os = os;
         this.color = color;
     }
 
     @Override
     public String toString() {
-        return name + " - Название, " + access_memory + " - ОЗУ, " + hard_drive + " - Объем ЖД, " + os
-                + " - Операционная система, " + color + " - Цвет. ";
-
+        return name + "; " +
+                "ОЗУ:" + ram +  "; " +
+                "Диск: " + hd + "; " +
+                "ОС: " + os + "; " +
+                "цвет:" + color + "; ";
     }
-
-    public String toName() {
-        return name + " - Название. ";
-    }
-
-    public String toAccess() {
-        return access_memory + " - ОЗУ. ";
-    }
-
-    public String toHard_drive() {
-        return hard_drive + " - Объем ЖД.";
-    }
-
-    public String toOS() {
-        return os + " - Операционная система.";
-    }
-
-    public String toColor() {
-        return color + " - Цвет.";
-    }
-
-    public void vibor() {
-        System.out.println("Выбери по каким параметрам будем делать фильтрацию!");
-        System.out.println("1 - Название, 2 - ОЗУ, 3 - Объем ЖД, 4 - Операционная система, 5 - Цвет. ");
-        int numb1 = io.nextInt();
-    }
-
+    
+    
 }
